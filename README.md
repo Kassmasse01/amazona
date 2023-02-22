@@ -50,3 +50,8 @@ Description
 11. Save Cart Items
     1. install js-cookie package
     2. save and retreive cart items in cookies
+
+12. Create Login Form
+    1. install react hook form
+    2. create input boxes
+    3. add login button
