@@ -72,3 +72,5 @@ export default function paymentScreen() {
     </Layout>
   )
 }
+
+paymentScreen.auth = true;
