@@ -29,3 +29,4 @@ export default function ProductItem( {product, addToCartHandler } ) {
     </div>
   )
 }
+
