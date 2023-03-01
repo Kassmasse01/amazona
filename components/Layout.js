@@ -1,5 +1,5 @@
 import { signOut, useSession } from 'next-auth/react';
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useReducer } from "react";
 import { ToastContainer } from 'react-toastify';
 import { Menu } from '@headlessui/react';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +20,7 @@ export default function Layout({title,children}) {
     
     const logoutClickHandler = () => {
         Cookies.remove('cart');
-        dispatch({type:CART_RESET});
+        dispatch({type:'CART_RESET'});
         signOut({callbackUrl:'/login'});
     };
 

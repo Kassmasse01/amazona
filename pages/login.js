@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { getError } from '../utils/error';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
  
 export default function loginScreen() {
   const { data: session } = useSession();
@@ -84,8 +85,8 @@ export default function loginScreen() {
           <button className="primary-button">Login</button>
         </div>
         <div className="mb-4 ">
-          Don&apos;t have an account? &nbsp;
-          {/* <Link href="register">Register</Link> */}
+          Don&apos;t have an account? &nbsp;      
+          <Link href={`/register?redirect=${redirect || '/'}`}>Register</Link>
         </div>
       </form>
     </Layout>
